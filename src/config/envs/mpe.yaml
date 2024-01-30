@@ -1,0 +1,13 @@
+env: mpe
+
+env_args:
+  map_name: "pp_6v2_classical"        # cn_3v3_classical, pp_3v1_classical, pp_6v2_classical
+  seed: 1
+
+test_greedy: True
+test_nepisode: 64       # 32
+test_interval: 10000
+log_interval: 10000
+runner_log_interval: 10000
+learner_log_interval: 10000
+t_max: 3050000      # 2050000

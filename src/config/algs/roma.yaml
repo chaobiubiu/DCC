@@ -1,0 +1,53 @@
+# --- ROMA specific parameters ---
+
+# use epsilon greedy action selector
+action_selector: "epsilon_greedy"
+epsilon_start: 1.0
+epsilon_finish: 0.05
+epsilon_anneal_time: 500000       # 500k for 3s5z_vs_3s6z, 6h_vs_8z, otherwise 50k
+
+# The settings below may run in SMAC.
+runner: "parallel"
+batch_size_run: 1
+
+# For simple environment.
+#runner: "general"
+
+buffer_size: 5000
+
+# update the target network every {} episodes
+target_update_interval: 200
+
+# use the Q_Learner to train
+agent_output_type: "q"
+learner: "roma_learner"
+double_q: True
+mixer: "qmix"
+mixing_embed_dim: 32
+hypernet_layers: 2
+hypernet_embed: 64
+
+agent: "roma_agent"
+mac: "roma_mac"
+
+latent_dim: 3
+kl_loss_weight: 0.0001
+h_loss_weight: 0.0001
+var_floor: 0.002
+NN_HIDDEN_SIZE: 16
+dis_loss_weight: 0.001
+dis_time: 0
+soft_constraint_weight: 1.0
+roma_raw: False
+
+dis_sigmoid: False
+
+save_model: False
+#device_num: 0
+save_replay: False
+
+# For mpe, we set standarise_rewards True
+standardise_rewards: False
+
+# for latent model
+name: "roma_single_1"

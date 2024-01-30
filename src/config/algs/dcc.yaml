@@ -1,0 +1,53 @@
+# --- DCC specific parameters ---
+
+# use epsilon greedy action selector
+action_selector: "soft_epsilon_greedy"
+epsilon_start: 1.0
+epsilon_finish: 0.05
+epsilon_anneal_time: 50000       # 500k for 3s5z_vs_3s6z, 6h_vs_8z, otherwise 50k
+
+runner: "episode"
+
+buffer_size: 5000
+
+# update the target network every {} episodes
+target_update_interval: 200
+
+mac: "dcc_mac"
+high_agent: "rnn"
+low_agent: "dcc_agent"
+
+n_skills: 5
+skill_interval: 5
+
+use_discrim: True
+discrim_loss_weight: 1.0
+
+use_intrinsic: True
+low_per_weight: 0.01
+low_global_weight: 0.001
+
+# Default setting
+is_latent_detach: False
+
+# use the Q_Learner to train
+agent_output_type: "q"
+learner: "dcc_learner"
+double_q: True
+mixer: "qmix"
+mixing_embed_dim: 32
+hypernet_layers: 2
+hypernet_embed: 64
+
+var_floor: 0.002
+
+save_model: False
+
+# For mpe, we set standarise_rewards True
+standardise_rewards: False
+
+# For corridor map, we anneal the intrinsic rewards.
+anneal: False
+anneal_rate: 5.0
+
+name: "dcc_test_1"
