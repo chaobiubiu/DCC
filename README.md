@@ -1,6 +1,6 @@
 # Coordinating Multi-Agent Reinforcement Learning via Dual Collaborative Constraints
 
-Code for the paper "Coordinating Multi-Agent Reinforcement Learning via Dual Collaborative Constraints" submitted to Pattern Recognition. 
+Code for the paper "Coordinating Multi-Agent Reinforcement Learning via Dual Collaborative Constraints" submitted to Neural Networks. 
 
 This repository develops DCC algorithm on both Multi-agent Particle Environments and StarCraft Multi-Agent Challenge benchmarks, and
 compares it with several baselines including LDSA, MAVEN, ROMA, QMIX, HSD and RODE_nr. 
